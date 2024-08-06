@@ -65,9 +65,9 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-5 justify-center p-14"
         >
-          <span>Dear Lama Dev,</span>
+          <span>Dear Keyun,</span>
           <textarea
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
@@ -83,6 +83,7 @@ const ContactPage = () => {
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
             Send
           </button>
+          <span>Or contact me on : kssimejiya@gmail.com</span>
           {success && (
             <span className="text-green-600 font-semibold">
               Your message has been sent successfully!
