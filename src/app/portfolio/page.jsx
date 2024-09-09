@@ -8,7 +8,8 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "GAuto & GPilot",
+    title: "G-Auto & G-Pilot",
+    tech: "React-Native",
     desc: "Taxi booking app, it has two different app for user and driver, it has functionality to book taxi for self and other user also. User and driver can track current location and navigation path with desired stoppage points.",
     img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     link: "https://lama.dev",
@@ -17,6 +18,7 @@ const items = [
     id: 2,
     color: "from-blue-300 to-violet-300",
     title: "Infostay",
+    tech: "React-Native",
     desc: "Stay app, it has 3 modules like Guest, Employee and Business. This app has unique functionality like app user interface can be updated from admin panel. So, any hotals or stay related business can use this single app only with having diiferent user interface. ",
     img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     link: "https://lama.dev",
@@ -25,6 +27,7 @@ const items = [
     id: 3,
     color: "from-violet-300 to-purple-300",
     title: "Easy Props",
+    tech: "React-Native",
     desc: "Real Estate app, in this app user can search property on perticular location with specific requirement like they want as for stay or commercial and for purchase or rent.",
     img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     link: "https://lama.dev",
@@ -33,8 +36,27 @@ const items = [
     id: 4,
     color: "from-purple-300 to-red-300",
     title: "Hyypp",
+    tech: "React-Native",
     desc: "Promotion app, in this app any influencer can gain follower or get work by agencies. It having upto date activy of influncer which can help other to track reference and hire them.",
     img: "/hyypp.png",
+    link: "https://lama.dev",
+  },
+  {
+    id: 5,
+    color: "from-purple-300 to-red-300",
+    title: "Spryntz",
+    tech: "React-Native",
+    desc: "Food Order app, in this app user can order different type of food from different restaurants. App is similar like Swiggy & Tomato",
+    img: "/spryntz.jpeg",
+    link: "https://lama.dev",
+  },
+  {
+    id: 6,
+    color: "from-purple-300 to-red-300",
+    title: "Kiwimi",
+    tech: "Next.js",
+    desc: "Academic portal app, it has 3 modules student, tutor and admin. App is similar like Udemy",
+    img: "/kiwimi.webp",
     link: "https://lama.dev",
   },
 ];
@@ -43,7 +65,7 @@ const PortfolioPage = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85.70%"]);
 
   return (
     <motion.div
@@ -66,8 +88,11 @@ const PortfolioPage = () => {
               >
                 <div className="flex flex-col gap-8 text-white">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                    {item.title}
+                    {item.title} 
                   </h1>
+                  <h2 className="text-lg font-bold md:text-2xl lg:text-4xl xl:text-6xl">
+                    ({item.tech})
+                  </h2>
                   <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
                     <Image src={item.img} alt="" fill />
                   </div>
